@@ -141,3 +141,19 @@ ul {
         display: block;
     }
 }
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .show-small {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .show-large {
+        display: block;
+    }
+}

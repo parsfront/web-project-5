@@ -1,0 +1,20 @@
+.navbar__search-box {
+    width: 20rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar {
+        position: sticky;
+        top: 0;
+        box-shadow: 0 0 4px 4px black;
+    }
+
+    .navbar__search-box {
+        order: 1;
+        width: 12rem;
+    }
+
+    .navbar__logo {
+        order: 2;
+    }
+}
