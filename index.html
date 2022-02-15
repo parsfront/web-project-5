@@ -6,20 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>قالب پیشرفته</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/search.css">
 </head>
 
 <body>
 
     <!--BEM Block Element Modifier-->
-    <div class="search">
-        <form action="#" onSubmit="return false" class="search__form">
-            <input type="text" class="search__input" placeholder="جستجو کنید">
-            <button class="search__btn" type="submit">
-                <span class="search__circle"></span>
-                <span class="search__stand"></span>
-            </button>
-        </form>
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar__search-box">
+                <div class="search">
+                    <form action="#" onSubmit="return false" class="search__form">
+                        <input type="text" class="search__input" placeholder="جستجو کنید">
+                        <button class="search__btn" type="submit">
+                            <span class="search__circle"></span>
+                            <span class="search__stand"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="navbar__nav">
+                <div class="nav">
+                    <ul class="nav__lists">
+                        <li class="nav__list"><a href="/" class="nav__link">خانه</a></li>
+                        <li class="nav__list"><a href="/" class="nav__link">دوره ها</a></li>
+                        <li class="nav__list"><a href="/" class="nav__link">مدرسین</a></li>
+                        <li class="nav__list"><a href="/" class="nav__link">درباره ما</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__logo">
+                <a href="/"><img src="./images/logo-header.png" alt="Logo Large"></a>
+            </div>
+        </div>
     </div>
 
 </body>
