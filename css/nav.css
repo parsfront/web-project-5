@@ -9,3 +9,58 @@
         display: none;
     }
 }
+
+/*Burger Menu*/
+.nav__burger-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 4rem;
+    height: 4rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 769px) {
+    .nav__burger-label {
+        display: none;
+    }
+}
+
+.nav__burger-label > span {
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background: #2196f3;
+    transition: all 0.3s cubic-bezier(0.39, -0.69, 0.59, 1.54);
+}
+
+.nav__burger-label :nth-child(1) {
+    width: 80%;
+}
+
+.nav__burger-label > span:nth-child(2) {
+    width: 100%;
+}
+
+.nav__burger-label :nth-of-type(3) {
+    width: 60%;
+}
+
+.nav__burger-checkbox:checked ~ .nav__burger-label :nth-child(1) {
+    width: 50%;
+    transform-origin: bottom;
+    transform: rotate(45deg) translate(-1rem, 1.6rem);
+}
+
+.nav__burger-checkbox:checked ~ .nav__burger-label > span:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.nav__burger-checkbox:checked ~ .nav__burger-label :nth-of-type(3) {
+    width: 50%;
+    transform: rotate(45deg) translate(-0.5rem, -0.1rem);
+}
+
+.nav__burger-checkbox {
+    display: none;
+}

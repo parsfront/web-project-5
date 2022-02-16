@@ -11,7 +11,7 @@
 
     .navbar__search-box {
         order: 1;
-        width: 12rem;
+        width: auto;
     }
 
     .navbar__logo {
