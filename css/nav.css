@@ -12,6 +12,17 @@
 }
 
 /*L1 list li*/
+.nav__list {
+    position: relative;
+    display: block;
+    padding: 1.3rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav__list:hover > ul.nav__sublists1 {
+    transform: scale(1);
+}
+
 /*L1 link a*/
 .nav__link {
     padding: 1.3rem;
@@ -38,6 +49,55 @@
 
 .nav__link:hover::after {
     width: 100%;
+}
+
+/* sublist1 li*/
+.nav__sublist1 {
+    position: relative;
+}
+
+.nav__sublist1:hover > ul.nav__sublists2 {
+    transform: scale(1);
+}
+
+.nav__sublist1 > a i:last-child {
+    margin-right: auto;
+}
+
+/*Sublists1 ul*/
+.nav__sublists1,
+.nav__sublists2 {
+    position: absolute;
+    width: 20rem;
+    background-color: #fff;
+    border-top: 0.3rem solid #e76f51;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 4px rgba(61, 61, 61);
+    transform-origin: top right;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+    margin-top: 13px;
+}
+
+/*Sublists2 ul*/
+.nav__sublists2 {
+    right: 100%;
+    top: 0;
+}
+
+/* all submenu links */
+.nav__sublists1 a {
+    display: flex;
+    align-items: center;
+    padding: 1.3rem;
+    color: #444;
+    transition: all 0.3s ease;
+}
+
+.nav__sublists1 a:hover {
+    padding-right: 1.5rem;
+    background-color: #f1f1f1;
+    color: #0d62da;
 }
 
 /*Arrow*/
