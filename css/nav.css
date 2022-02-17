@@ -1,3 +1,4 @@
+/*L1 lists ul*/
 .nav__lists {
     display: flex;
     justify-content: center;
@@ -8,6 +9,52 @@
     .nav__lists {
         display: none;
     }
+}
+
+/*L1 list li*/
+/*L1 link a*/
+.nav__link {
+    padding: 1.3rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav__link:hover {
+    color: #3c4858;
+}
+
+.nav__link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    bottom: 0;
+    left: 50%;
+    border-radius: 0.5rem;
+    height: 3px;
+    background-color: #0d62da;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav__link:hover::after {
+    width: 100%;
+}
+
+/*Arrow*/
+.nav__arrow {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border: 1px solid #3c4858;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.nav__link:hover > span {
+    transform: rotate(225deg);
 }
 
 /*Burger Menu*/

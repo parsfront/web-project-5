@@ -2,13 +2,15 @@
     width: 20rem;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
     .navbar {
         position: sticky;
         top: 0;
         box-shadow: 0 0 4px 4px black;
     }
+}
 
+@media only screen and (max-width: 992px) {
     .navbar__search-box {
         order: 1;
         width: auto;

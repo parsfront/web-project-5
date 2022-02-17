@@ -35,6 +35,11 @@ ul {
     list-style: none;
 }
 
+a {
+    color: #0d62da;
+    text-decoration: none;
+}
+
 .container {
     width: 100%;
     margin-left: auto;
