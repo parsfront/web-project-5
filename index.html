@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>قالب پیشرفته</title>
+    <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/nav.css">
@@ -19,7 +20,7 @@
         <div class="container pt-20 pb-20 flex justify-content-space-between align-items-center">
             <div class="navbar__search-box">
                 <div class="search">
-                    <form action="#" onSubmit="return false" class="search__form">
+                    <form action="#" onsubmit="return false;" class="search__form">
                         <input type="text" class="search__input" placeholder="جستجو کنید">
                         <button class="search__btn" type="submit">
                             <span class="search__circle"></span>
@@ -42,13 +43,25 @@
                         <li class="nav__list"><a href="/" class="nav__link">خانه</a></li>
                         <li class="nav__list"><a href="/" class="nav__link">دوره ها<span class="nav__arrow"></span></a>
                             <ul class="nav__sublists1">
-                                <li><a href="#">تور و گردشگری</a></li>
-                                <li><a href="#">دوره های آنلاین</a></li>
-                                <li class="nav__sublist1"><a href="#">سایر</a>
+                                <li><a href="#">
+                                        <i class="fas fa-globe-asia"></i>
+                                        تور و گردشگری</a></li>
+                                <li>
+                                    <a href="#"><i class="fas fa-user-graduate"></i>آموزش آنلاین</a>
+                                </li>
+                                <li class="nav__sublist1">
+                                    <a href="#"><i class="fas fa-list"></i>سایر<i class="fas fa-angle-left"></i></a>
+
                                     <ul class="nav__sublists2">
-                                        <li><a href="#">فروشگاه اینترنتی</a></li>
-                                        <li><a href="#">بلیط هواپیما و هتل</a></li>
-                                        <li><a href="#">اجاره خودرو</a></li>
+                                        <li>
+                                            <a href="#"><i class="fas fa-credit-card"></i>فروشگاه اینترنتی</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fas fa-hotel"></i>بلیط هواپیما و هتل</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fas fa-car"></i>اجاره خودرو</a>
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>
