@@ -52,8 +52,8 @@
     position: absolute;
     width: 2rem;
     height: 2rem;
-    top: 6px;
-    left: 7px;
+    top: 0;
+    left: 0;
 }
 
 .search__circle::before,
@@ -83,8 +83,8 @@
 
 .search__stand {
     position: absolute;
-    top: 25px;
-    left: 22px;
+    top: 2rem;
+    left: 1.5rem;
     width: 1.5rem;
     height: 0.6rem;
     background-color: transparent;
@@ -120,8 +120,8 @@
 }
 
 .search:focus-within .search__circle {
-    top: 11px;
-    left: 4px;
+    top: 0.4rem;
+    left: -0.3rem;
 }
 
 .search:focus-within .search__circle::before,
@@ -142,7 +142,7 @@
 }
 
 .search:focus-within .search__stand {
-    top: 22px;
+    top: 1.5rem;
     transform: rotate(0);
 }
 

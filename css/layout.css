@@ -38,14 +38,19 @@ ul {
 a {
     color: #0d62da;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e76f51;
 }
 
 .container {
     width: 100%;
-    margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
+    margin-left: auto;
     padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 @media only screen and (min-width: 576px) {
@@ -76,6 +81,9 @@ a {
     .container {
         max-width: 1320px;
     }
+}
+
+@media type and (condition) {
 }
 
 /* Helper */
@@ -129,22 +137,6 @@ a {
 
 .mb-20 {
     margin-bottom: 2rem;
-}
-
-.hidden {
-    display: none;
-}
-
-@media only screen and (max-width: 992px) {
-    .show-small {
-        display: block;
-    }
-}
-
-@media only screen and (min-width: 993px) {
-    .show-large {
-        display: block;
-    }
 }
 
 .hidden {
