@@ -1,0 +1,190 @@
+.masonry {
+    @include flex(center, center, column);
+
+    &__box {
+        overflow: hidden;
+        columns: 4;
+        column-width: 30rem;
+        column-gap: 2rem;
+
+        &:hover>* {
+            filter: brightness(0.9) blur(2px);
+        }
+    }
+
+    &__item {
+        overflow: hidden;
+        position: relative;
+        margin: auto auto 1rem auto;
+        border-radius: 0.3rem;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(62, 62, 62, 0) 0%, rgba(62, 62, 62, 0.1) 20%, rgba(62, 62, 62, 0.7) 70%, rgba(62, 62, 62, 1) 100%);
+            transform: translateY(40%);
+            transition: all 0.4s ease;
+        }
+
+        &:hover {
+            filter: none;
+
+            &:before {
+                transform: translateY(0);
+            }
+
+            &>.masonry__overlay {
+                transform: translateY(10%);
+
+                p,
+                i {
+                    opacity: 1;
+                }
+            }
+
+            &>.masonry__img {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        @include flex(space-evenly, center, column);
+        padding: 1.5rem;
+        color: $color-white;
+        transform: translateY(70%);
+        transition: all 0.3s cubic-bezier(0.69, -0.01, 0.45, 1.02);
+
+        p,
+        i,
+        h3 {
+            color: $color-white;
+        }
+
+        p,
+        i {
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        i {
+            font-size: 4rem;
+
+            &:hover {
+                color: $color-green2;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    &__img {
+        display: block;
+        width: calc(100% + 2rem);
+        transform: translate3d(2rem, 0, 0);
+        transition: all 0.4s cubic-bezier(0.69, -0.01, 0.45, 1.02);
+    }
+
+    &__input {
+        @extend %fade-out;
+    }
+
+    &>input[id="all"]:checked~.tabs>label[for="all"]>h3,
+    &>input[id="css"]:checked~.tabs>label[for="css"]>h3,
+    &>input[id="php"]:checked~.tabs>label[for="php"]>h3,
+    &>input[id="java"]:checked~.tabs>label[for="java"]>h3 {
+        color: $color-white;
+    }
+
+    &>input[id="all"]:checked~.tabs>.tabs__label-bg {
+        transform: translate3d(-3px, 0, 0);
+
+        @media only screen and (max-width: 576px) {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    &>input[id="css"]:checked~.tabs>.tabs__label-bg {
+        transform: translate3d(-12rem, 0, 0);
+
+        @media only screen and (max-width: 576px) {
+            transform: translate3d(0, 5rem, 0);
+        }
+    }
+
+    &>input[id="php"]:checked~.tabs>.tabs__label-bg {
+        transform: translate3d(-24rem, 0, 0);
+
+        @media only screen and (max-width: 576px) {
+            transform: translate3d(0, 10rem, 0);
+        }
+    }
+
+    &>input[id="java"]:checked~.tabs>.tabs__label-bg {
+        transform: translate3d(-35.5rem, 0, 0);
+
+        @media only screen and (max-width: 576px) {
+            transform: translate3d(0, 15rem, 0);
+        }
+    }
+
+    &>input[id="css"]:checked~.masonry__box>.masonry__item:not([data-lang~="css"]),
+    &>input[id="php"]:checked~.masonry__box>.masonry__item:not([data-lang~="php"]),
+    &>input[id="java"]:checked~.masonry__box>.masonry__item:not([data-lang~="java"]) {
+        @extend %fade-out;
+    }
+}
+
+.tabs {
+    position: relative;
+    @include flex(center, center);
+    margin: 4rem;
+    color: $color-gray5;
+    background: rgba(80, 91, 105, 0.5);
+    border-radius: 2rem;
+
+    @media only screen and (max-width: 576px) {
+        flex-direction: column;
+        height: 20rem;
+    }
+
+    &>label {
+        position: relative;
+        padding: 1rem 0;
+        width: 12rem;
+        font-size: 1.6rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__label-bg {
+        position: absolute;
+        @include flex(center, center);
+        right: 0;
+        width: 12rem;
+        height: 4rem;
+        background-color: $color-gray5;
+        border-radius: 2rem;
+        transition: all 0.3s cubic-bezier(0.65, -0.01, 0.38, 0.99);
+
+        @media only screen and (max-width: 576px) {
+            top: 0;
+            height: 5rem;
+        }
+    }
+}

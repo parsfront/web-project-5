@@ -1,0 +1,39 @@
+.ripple-play-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    @include flex(center, center);
+    width: 7rem;
+    height: 7rem;
+    background-color: $color-red1;
+    color: $color-white;
+    font-size: 3rem;
+    border-radius: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    transition: 0.3s ease;
+
+    &:hover {
+        color: $color-green1;
+        background-color: $color-red2;
+    }
+
+    //Play button wave
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 1px solid $color-red1;
+    }
+
+    &::before {
+        animation: play-wave 2.2s ease-in 0.8s infinite forwards;
+    }
+
+    &::after {
+        animation: play-wave 2.2s ease-in infinite forwards;
+    }
+}

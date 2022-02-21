@@ -1,0 +1,106 @@
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media only screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+@media type and (condition) {}
+
+/* Flex helpers */
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+/* Padding Margin helper  */
+.pt-10 {
+  padding-top: 1rem;
+}
+
+.pb-10 {
+  padding-bottom: 1rem;
+}
+
+.pt-20 {
+  padding-top: 2rem;
+}
+
+.pb-20 {
+  padding-bottom: 2rem;
+}
+
+/* Margin */
+.mt-20 {
+  margin-top: 2rem;
+}
+
+.mb-20 {
+  margin-bottom: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .show-small {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .show-large {
+    display: block;
+  }
+}

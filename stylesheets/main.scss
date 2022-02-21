@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins", "abstracts/placeholders";
+
+@import "base/base", "base/fonts", "base/helpers", "base/typography", "base/animations";
+
+@import "components/search", "components/buttons", "components/icons", "components/courses", "components/cards", "components/mask-video", "components/ripple-play-btn", "components/accordion",
+"components/masonry", "components/modal", "components/maps", "components/glass-effect", "components/form", "components/pattern", "components/flip", "components/info", "components/skew";
+
+@import "layout/nav", "layout/navbar", "layout/header", "layout/footer";
+
+@import "pages/home";

@@ -1,0 +1,7 @@
+@function image($file) {
+    @return url($base-path + 'images/' + $file);
+}
+
+@function font($file) {
+    @return url($base-path + 'fonts/' + $file);
+}

@@ -1,0 +1,48 @@
+.success-icon {
+    width: 7rem;
+    height: 7rem;
+    fill: none;
+    stroke: $color-blue3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+
+    &:hover {
+        stroke-dasharray: 230;
+        stroke-dashoffset: 230;
+        animation: stroke-dashoffset 0.6s linear forwards, success-scale 0.2s ease 0.6s;
+    }
+}
+
+.world-icon {
+    width: 6.5rem;
+    height: 6.5rem;
+    fill: none;
+    stroke: $color-orange1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+
+    &:hover {
+        .world-icon__world-circle {
+            opacity: 0;
+            animation: fade-in .6s linear forwards;
+        }
+
+        .world-icon__world-map {
+            stroke-dasharray: 150;
+            stroke-dashoffset: 150;
+        }
+
+        .world-icon__world-marker {
+            stroke-dasharray: 80;
+            stroke-dashoffset: 80;
+        }
+
+        .world-icon__world-map,
+        .world-icon__world-marker {
+            opacity: 0;
+            animation: stroke-dashoffset .6s linear forwards;
+        }
+    }
+}

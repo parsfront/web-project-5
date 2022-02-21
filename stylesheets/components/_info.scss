@@ -1,0 +1,15 @@
+.info {
+    position: relative;
+    @include flex(flex-start, center);
+    margin: 1rem;
+
+    & img {
+        border-radius: 50%;
+        margin-left: 1rem;
+    }
+
+    @media only screen and (max-width: 576px) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
